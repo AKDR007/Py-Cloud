@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body style="font-family: sans-serif; background-color: black; color: white;">
+  
+    <div style="width: 100vw; height: 100vh;display: flex;flex-direction: column; align-items: center; justify-content: center; background-color: black;">
+        
+        <div style="display: flex;flex-direction: column; align-items: center; justify-content: center; ;background-color: transparent;">
+
+    
+                <h2>Py Cloud</h2>
+                <h2>Login</h2>
+                {% if error %}
+                    <p>{{ error }}</p>
+                {% endif %}
+
+                <form method="post" action="/Login">
+                    <label for="ID">Username:</label>&nbsp;
+                    <input type="text" id="ID" name="ID"><br><br>
+                    <label for="Password">Password:</label>&nbsp;&nbsp;
+                    <input type="password" id="Password" name="Password"><br> <br>
+                    <input type="submit" value="Login">
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="submit" value="Register" onclick="location.href='/Register'">    
+                </form>
+
+    
+
+        </div>
+    </div>
+
+</body>
+</html>
